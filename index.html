@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام جيمس الأمريكي لإدارة المدارس والحضور والانصراف | James American School System</title>
+  <meta name="description" content="نظام Windows Desktop عربي متكامل لإدارة الحضور والانصراف، النقل المدرسي والأتوبيسات، وطباعة الكارنيهات والتذاكر الحرارية الذكية بدون إنترنت.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/شعار المدرسة.png">
+</head>
+<body>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="brand">
+        <img src="images/شعار المدرسة.png" alt="شعار المدرسة" class="brand-logo" onerror="this.src='images/school_logo.png'">
+        <div class="brand-info">
+          <h3>James American School</h3>
+          <span>نظام الإدارة والحضور والنقل المدرسي الذكي</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features">المميزات الرئيسية</a></li>
+        <li><a href="#tabs-showcase">التبويبات والواجهات</a></li>
+        <li><a href="#gallery">معرض الشاشات</a></li>
+        <li><a href="#specs">المواصفات الفنية</a></li>
+        <li><a href="#faq">الأسئلة الشائعة</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="#contact" class="btn btn-primary" style="padding: 9px 20px; font-size: 0.92rem;">
+          طلب نسخة تجريبية
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="القائمة">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <div class="hero-content">
+          <div class="badge-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>نظام سطح مكتب مشفر يعمل بدون إنترنت (Offline-First)</span>
+          </div>
+          <h1>
+            المنظومة الأذكى لإدارة 
+            <span class="text-gradient">حضور وانصراف ونقل الطلاب</span>
+            والكارنيهات المدرسية
+          </h1>
+          <p>
+            تطبيق Windows احترافي مبني بأحدث تقنيات Flutter و PostgreSQL لضبط حركة الطلاب اليومية، طباعة تذاكر الانصراف الحرارية في أجزاء من الثانية، وتصميم وإصدار الكارنيهات الذكية بباركود حماية مشفر.
+          </p>
+          <div class="hero-actions">
+            <a href="#tabs-showcase" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              استعراض تبويبات البرنامج
+            </a>
+            <a href="#contact" class="btn btn-glass">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              تواصل مع المطور
+            </a>
+          </div>
+          <div class="hero-tags">
+            <div class="hero-tag-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>سيرفر مركزي + أجهزة فرعية</span>
+            </div>
+            <div class="hero-tag-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>طباعة حرارية 58mm / 80mm</span>
+            </div>
+            <div class="hero-tag-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>تشفير ومنع استنساخ الكارنيه</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Preview Mockup -->
+        <div class="hero-mockup-wrap">
+          <div class="hero-mockup-frame">
+            <div class="window-bar">
+              <div class="win-dot red"></div>
+              <div class="win-dot yellow"></div>
+              <div class="win-dot green"></div>
+              <div class="win-title">James American School | لوحة المتابعة</div>
+            </div>
+            <img src="images/لوحة المتابعة.png" alt="لوحة المتابعة الرئيسية" class="mockup-img" id="hero-main-img">
+          </div>
+          <div class="floating-badge">
+            <div class="dot-live"></div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.9rem; color: #fff;">مزامنة لحظية Delta Sync</div>
+              <div style="font-size: 0.78rem; color: #94a3b8;">تحديث فوري لبيانات الأتوبيسات والغياب</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS STRIP ================= -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number text-gradient">100%</div>
+          <div class="stat-label">أوفلاين بدون انقطاع</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number text-gradient-emerald">0.2 ث</div>
+          <div class="stat-label">زمن طباعة تذكرة الانصراف</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number text-gradient">أمان عالي</div>
+          <div class="stat-label">تشفير كود الكارنيه ورقم الإصدار</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number text-gradient-emerald">PostgreSQL</div>
+          <div class="stat-label">قاعدة بيانات مع نسخ احتياطي آلي</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TABS SHOWCASE (MAIN CORE SECTION) ================= -->
+  <section class="tabs-section" id="tabs-showcase">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <span>استعراض شامل لتبويبات النظام</span>
+        </div>
+        <h2>واجهات ذكية مصممة خصيصاً لسرعة الإنجاز اليومي</h2>
+        <p>انقر على أي تبويب لمشاهدة لقطة الشاشة والتعرف على المهام والخصائص المتاحة بداخله.</p>
+      </div>
+
+      <!-- Tabs Navigation Bar -->
+      <div class="tabs-nav-wrapper">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-target="tab-dashboard">
+            <span>📊</span> لوحة المتابعة
+          </button>
+          <button class="tab-btn" data-target="tab-attendance">
+            <span>⏱️</span> الغياب والحضور
+          </button>
+          <button class="tab-btn" data-target="tab-students">
+            <span>👥</span> شؤون الطلاب
+          </button>
+          <button class="tab-btn" data-target="tab-buses">
+            <span>🚌</span> الأتوبيسات والنقل
+          </button>
+          <button class="tab-btn" data-target="tab-cards">
+            <span>🪪</span> طباعة الكارنيهات
+          </button>
+          <button class="tab-btn" data-target="tab-promotion">
+            <span>🔄</span> الترحيل السنوي
+          </button>
+          <button class="tab-btn" data-target="tab-settings">
+            <span>⚙️</span> الإعدادات والصلاحيات
+          </button>
+          <button class="tab-btn" data-target="tab-tickets">
+            <span>🧾</span> مصمم التذاكر الحرارية
+          </button>
+          <button class="tab-btn" data-target="tab-login">
+            <span>🔐</span> تسجيل الدخول
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 1: لوحة المتابعة -->
+      <div class="tab-panel active" id="tab-dashboard">
+        <div class="tab-card-grid">
+          <div class="tab-image-box">
+            <img src="images/لوحة المتابعة.png" alt="تبويب لوحة المتابعة" data-zoom-src="images/لوحة المتابعة.png" data-zoom-caption="تبويب لوحة المتابعة والداشبورد الذكي">
+            <button class="zoom-overlay-btn" data-zoom-src="images/لوحة المتابعة.png" data-zoom-caption="تبويب لوحة المتابعة">
+              🔍 تكبير الشاشة
+            </button>
+          </div>
+          <div class="tab-details">
+            <div class="badge-pill" style="margin-bottom: 12px;">لوحة المتابعة | Dashboard</div>
+            <h3>رؤية لحظية شاملة لحركة المدرسة</h3>
+            <p>مؤشرات وإحصائيات دقيقة تتحدث فورياً لعرض الموقف العام للمدرسة دون الحاجة لإعادة تحميل الصفحة.</p>
+            <ul class="tab-feature-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>إجمالي الطلاب والغياب:</strong> رصد فوري لعدد الحاضرين والغياب ونسب الحضور المئوية.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>الطلاب المتواجدين بالمدرسة:</strong> تتبع مستمر لمن انصرف ومن ما زال داخل الحرم المدرسي.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>توزيع وسائل الانصراف:</strong> إحصائيات من خرج بالأتوبيس، مع ولي الأمر، أو عيادة المدرسة.</span>
+              </li>
+            </ul>
+            <div class="tab-tech-badges">
+              <span class="tech-tag">ملف الصورة: images/لوحة المتابعة.png</span>
+              <span class="tech-tag">مزامنة Socket.IO</span>
+              <span class="tech-tag">إحصائيات تفاعلية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: الغياب والحضور -->
+      <div class="tab-panel" id="tab-attendance">
+        <div class="tab-card-grid">
+          <div class="tab-image-box">
+            <img src="images/الغياب والحضور.png" alt="تبويب الغياب والحضور" data-zoom-src="images/الغياب والحضور.png" data-zoom-caption="تبويب الغياب والحضور وتذاكر الانصراف">
+            <button class="zoom-overlay-btn" data-zoom-src="images/الغياب والحضور.png" data-zoom-caption="تبويب الغياب والحضور">
+              🔍 تكبير الشاشة
+            </button>
+          </div>
+          <div class="tab-details">
+            <div class="badge-pill" style="margin-bottom: 12px;">حضور وانصراف سريع</div>
+            <h3>تسجيل فوري بمسح الباركود وطباعة تذاكر المغادرة</h3>
+            <p>شاشة مخصصة لأفراد الأمن والاستقبال لتسجيل حضور الطلاب في الصباح وإصدار تذاكر الانصراف الآمنة بعد الظهر.</p>
+            <ul class="tab-feature-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>مسح الباركود الفوري:</strong> مسح كود الكارنيه في أجزاء من الثانية مع تنبيه صوتي ومرئي.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>طباعة تذكرة انصراف فورية:</strong> طباعة تذكرة حرارية للأمن بتفاصيل الطالب وولي الأمر والوقت وسبب الخروج.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>تحديد وسيلة الانصراف:</strong> أتوبيس المدرسة، ولي الأمر، بمفرده، خروج مرضي، أو إذن خاص.</span>
+              </li>
+            </ul>
+            <div class="tab-tech-badges">
+              <span class="tech-tag">ملف الصورة: images/الغياب والحضور.png</span>
+              <span class="tech-tag">طابعات حرارية 58/80 مم</span>
+              <span class="tech-tag">بحث سريع وفلاتر</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: شؤون الطلاب -->
+      <div class="tab-panel" id="tab-students">
+        <div class="tab-card-grid">
+          <div class="tab-image-box">
+            <img src="images/الطلاب والأشخاص.png" alt="تبويب شؤون الطلاب" data-zoom-src="images/الطلاب والأشخاص.png" data-zoom-caption="تبويب شؤون الطلاب وبيانات أولياء الأمور">
+            <button class="zoom-overlay-btn" data-zoom-src="images/الطلاب والأشخاص.png" data-zoom-caption="تبويب شؤون الطلاب">
+              🔍 تكبير الشاشة
+            </button>
+          </div>
+          <div class="tab-details">
+            <div class="badge-pill" style="margin-bottom: 12px;">قاعدة بيانات الطلاب والأشخاص</div>
+            <h3>إدارة شاملة لملفات الطلاب وأولياء الأمور</h3>
+            <p>سجل رقمي متكامل لكل طالب يضم البيانات الأكاديمية، أرقام الطوارئ، فصيلة الدم، الصور الشخصية، وحالة النشاط.</p>
+            <ul class="tab-feature-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>استيراد وتصدير إكسيل (Excel):</strong> رفع آلاف الطلاب بضغطة زر مع فحص تلقائي للأخطاء.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>التعديل الجماعي (Bulk Edit):</strong> تعديل الفصول أو المراحل أو حالة الطلاب دفعة واحدة بكل مرونة.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>إدارة أولياء الأمور:</strong> ربط الإخوة والأخوات بنفس ولي الأمر لتسهيل الانصراف والتواصل.</span>
+              </li>
+            </ul>
+            <div class="tab-tech-badges">
+              <span class="tech-tag">ملف الصورة: images/الطلاب والأشخاص.png</span>
+              <span class="tech-tag">استيراد Excel</span>
+              <span class="tech-tag">فلاتر متقدمة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: الأتوبيسات والنقل -->
+      <div class="tab-panel" id="tab-buses">
+        <div class="tab-card-grid">
+          <div class="tab-image-box">
+            <img src="images/الأتوبيسات والنقل.png" alt="تبويب الأتوبيسات والنقل" data-zoom-src="images/الأتوبيسات والنقل.png" data-zoom-caption="تبويب إدارة الأتوبيسات وخطوط النقل المدرسي">
+            <button class="zoom-overlay-btn" data-zoom-src="images/الأتوبيسات والنقل.png" data-zoom-caption="تبويب الأتوبيسات">
+              🔍 تكبير الشاشة
+            </button>
+          </div>
+          <div class="tab-details">
+            <div class="badge-pill" style="margin-bottom: 12px;">منظومة النقل المدرسي الذكي</div>
+            <h3>تنظيم أسطول الحافلات وتوزيع الطلاب والمشرفين</h3>
+            <p>حل متطور لمشكلة التكدس في انصراف الأتوبيسات المدرسية وربط كل طالب بحافلته وسائقه ومشرفه المعتمد.</p>
+            <ul class="tab-feature-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>خطوط السير والمحطات:</strong> تحديد مسار كل حافلة ومحطات التوقف وسعة الأتوبيس القصوى.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>قوائم استقلال الحافلة:</strong> كشف فوري بالطلاب المفترض صعودهم في كل أتوبيس ورصد أي غياب.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>تأكيد صعود الأتوبيس:</strong> تسجيل صعود الطالب للسيارة وطباعة بيان الرحلة للمشرف.</span>
+              </li>
+            </ul>
+            <div class="tab-tech-badges">
+              <span class="tech-tag">ملف الصورة: images/الأتوبيسات والنقل.png</span>
+              <span class="tech-tag">توزيع ذكي</span>
+              <span class="tech-tag">كشوف جاهزة للطباعة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 5: طباعة الكارنيهات -->
+      <div class="tab-panel" id="tab-cards">
+        <div class="tab-card-grid">
+          <div class="tab-image-box">
+            <img src="images/طباعة الكارنيهات.png" alt="تبويب طباعة الكارنيهات" data-zoom-src="images/طباعة الكارنيهات.png" data-zoom-caption="تبويب مصمم وطباعة الكارنيهات الذكية">
+            <button class="zoom-overlay-btn" data-zoom-src="images/طباعة الكارنيهات.png" data-zoom-caption="تبويب الكارنيهات">
+              🔍 تكبير الشاشة
+            </button>
+          </div>
+          <div class="tab-details">
+            <div class="badge-pill" style="margin-bottom: 12px;">مصمم الكارنيهات التفاعلي</div>
+            <h3>تصميم وطباعة أفرخ الكارنيهات بباركود حماية فريد</h3>
+            <p>استوديو تصميم كارنيهات مدمج داخل التطبيق يتيح تخصيص الوجه والخلفية، وتوزيع الكارنيهات على أفرخ A4 وطابعات الـ PVC.</p>
+            <ul class="tab-feature-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>قاعدة الكارنيه الأمني (Versioned ID):</strong> استخدام كود إصدار فريد مثل <code>1001-2</code>، يلغي تلقائياً أي كود قديم ويمنع التزوير.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>طباعة جماعية أفرخ:</strong> طباعة حتى 8 أو 10 كارنيهات في الصفحة الواحدة أو طباعة مفردة للبطاقات البلاستيكية.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>تخصيص اللوجو والألوان:</strong> وضع ألوان وهوية المدرسة وشعارها وتخصيص خطوط النصوص بدقة متناهية.</span>
+              </li>
+            </ul>
+            <div class="tab-tech-badges">
+              <span class="tech-tag">ملف الصورة: images/طباعة الكارنيهات.png</span>
+              <span class="tech-tag">تخطيط أفرخ A4 / PVC</span>
+              <span class="tech-tag">أمان ضد الاستنساخ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 6: الترحيل السنوي -->
+      <div class="tab-panel" id="tab-promotion">
+        <div class="tab-card-grid">
+          <div class="tab-image-box">
+            <img src="images/الترحيل السنوي.png" alt="تبويب الترحيل السنوي" data-zoom-src="images/الترحيل السنوي.png" data-zoom-caption="تبويب الترحيل ونقل الصفوف السنوي">
+            <button class="zoom-overlay-btn" data-zoom-src="images/الترحيل السنوي.png" data-zoom-caption="تبويب الترحيل">
+              🔍 تكبير الشاشة
+            </button>
+          </div>
+          <div class="tab-details">
+            <div class="badge-pill" style="margin-bottom: 12px;">الانتقال للعام الدراسي الجديد</div>
+            <h3>ترحيل سنوي ذكي وأرشفة الخريجين بنقرة واحدة</h3>
+            <p>انقل طلاب المدرسة بأكملهم من صف إلى الصف التالي مع بداية كل عام دراسي جديد بدون الحاجة لإعادة إدخال البيانات يدوياً.</p>
+            <ul class="tab-feature-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>خريطة ترحيل مخصصة:</strong> تحديد الصف التالي لكل فصل مع دعم حالات الرسوب أو البقاء بنفس الصف.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>أرشفة الخريجين:</strong> حفظ سجلات الطلاب المتخرجين في أرشيف آمن مع الاحتفاظ بكامل سجلات حضورهم السابقة.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>معاينة قبل التنفيذ:</strong> شاشة مراجعة تعرض قائمة الطلاب قبل اعتماد الترحيل لمنع أي أخطاء غير مقصودة.</span>
+              </li>
+            </ul>
+            <div class="tab-tech-badges">
+              <span class="tech-tag">ملف الصورة: images/الترحيل السنوي.png</span>
+              <span class="tech-tag">أمان البيانات</span>
+              <span class="tech-tag">أرشفة ذكية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 7: الإعدادات والصلاحيات -->
+      <div class="tab-panel" id="tab-settings">
+        <div class="tab-card-grid">
+          <div class="tab-image-box">
+            <img src="images/الإعدادات والصلاحيات.png" alt="تبويب الإعدادات والصلاحيات" data-zoom-src="images/الإعدادات والصلاحيات.png" data-zoom-caption="تبويب إعدادات النظام والصلاحيات والنسخ الاحتياطي">
+            <button class="zoom-overlay-btn" data-zoom-src="images/الإعدادات والصلاحيات.png" data-zoom-caption="تبويب الإعدادات">
+              🔍 تكبير الشاشة
+            </button>
+          </div>
+          <div class="tab-details">
+            <div class="badge-pill" style="margin-bottom: 12px;">لوحة تحكم المسؤول</div>
+            <h3>إدارة الصلاحيات والنسخ الاحتياطي وإعدادات الشبكة</h3>
+            <p>تحكم كامل في كل صغيرة وكبيرة في النظام: حسابات الموظفين، طابعات التذاكر، وضبط أوقات الحضور والانصراف.</p>
+            <ul class="tab-feature-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>أدوار وصلاحيات دقيقة (RBAC):</strong> تخصيص ما يراه كل موظف (أفراد الأمن، شؤون الطلاب، مشرفو الباصات، المدير العام).</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>نسخ احتياطي واسترجاع فوري:</strong> إنشاء وتنزيل نسخ احتياطية كاملة لقاعدة بيانات PostgreSQL بنقرة زر.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>إعدادات عنوان السيرفر والربط:</strong> ربط الأجهزة الفرعية بالجهاز الرئيسي عبر الـ IP المحلي بسهولة فائقة.</span>
+              </li>
+            </ul>
+            <div class="tab-tech-badges">
+              <span class="tech-tag">ملف الصورة: images/الإعدادات والصلاحيات.png</span>
+              <span class="tech-tag">صلاحيات محكمة</span>
+              <span class="tech-tag">نسخ احتياطي مدمج</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 8: مصمم التذاكر الحرارية -->
+      <div class="tab-panel" id="tab-tickets">
+        <div class="tab-card-grid">
+          <div class="tab-image-box">
+            <img src="images/مصمم التذاكر الحرارية.png" alt="مصمم التذاكر الحرارية" data-zoom-src="images/مصمم التذاكر الحرارية.png" data-zoom-caption="مصمم تذاكر الانصراف الحرارية المتقدم">
+            <button class="zoom-overlay-btn" data-zoom-src="images/مصمم التذاكر الحرارية.png" data-zoom-caption="مصمم التذاكر">
+              🔍 تكبير الشاشة
+            </button>
+          </div>
+          <div class="tab-details">
+            <div class="badge-pill" style="margin-bottom: 12px;">طباعة فورية عالية الكفاءة</div>
+            <h3>تخصيص كامل لتذكرة الانصراف الحرارية (Receipt Designer)</h3>
+            <p>تحكم في مظهر التذكرة التي يستلمها ولي الأمر أو سائق الأتوبيس: المقاس، اللوجو، الخطوط، وتوقيعات الإدارة.</p>
+            <ul class="tab-feature-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>دعم المقاسات الحرارية العالمية:</strong> متوافق مع ورق 58 مم و80 مم مع قص آلي للورق.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>طباعة عربية واضحة بدقة عالية:</strong> خدمة طباعة مستقلة وسريعة لا تسبب أي تعليق في الواجهة.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>بيانات أمنية كاملة:</strong> اسم الطالب، الفصل، رقم الأتوبيس، اسم المستلم، ووقت الخروج بالدقيقة.</span>
+              </li>
+            </ul>
+            <div class="tab-tech-badges">
+              <span class="tech-tag">ملف الصورة: images/مصمم التذاكر الحرارية.png</span>
+              <span class="tech-tag">ESC/POS Service</span>
+              <span class="tech-tag">خدمة طباعة محلية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 9: تسجيل الدخول -->
+      <div class="tab-panel" id="tab-login">
+        <div class="tab-card-grid">
+          <div class="tab-image-box">
+            <img src="images/تسجيل الدخول.png" alt="تبويب تسجيل الدخول" data-zoom-src="images/تسجيل الدخول.png" data-zoom-caption="شاشة تسجيل الدخول والاتصال المشفر">
+            <button class="zoom-overlay-btn" data-zoom-src="images/تسجيل الدخول.png" data-zoom-caption="تسجيل الدخول">
+              🔍 تكبير الشاشة
+            </button>
+          </div>
+          <div class="tab-details">
+            <div class="badge-pill" style="margin-bottom: 12px;">بوابة الأمان والتحقق</div>
+            <h3>تسجيل دخول مشفر مع فحص تلقائي لجهوزية السيرفر</h3>
+            <p>واجهة دخول أنيقة بنمط Glassmorphism الحديث مع توثيق JWT وجلسات آمنة تمنع الدخول غير المصرح به.</p>
+            <ul class="tab-feature-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>كشف حالة الخادم المحلي:</strong> مؤشر ذكي يوضح حالة اتصال التطبيق بقاعدة البيانات والسيرفر الرئيسي.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>حماية ضد محاولات الاختراق:</strong> تسجيل محاولات الدخول وحماية الحسابات من التخمين المتكرر.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>تذكر الجلسات الآمنة:</strong> تسهيل إعادة فتح البرنامج مع قفل فوري عند تسجيل الخروج.</span>
+              </li>
+            </ul>
+            <div class="tab-tech-badges">
+              <span class="tech-tag">ملف الصورة: images/تسجيل الدخول.png</span>
+              <span class="tech-tag">JWT Authentication</span>
+              <span class="tech-tag">واجهة Glassmorphism</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US / FEATURES ================= -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>المميزات الاستثنائية</span>
+        </div>
+        <h2>لماذا تختار إدارة المدارس هذا النظام دون غيره؟</h2>
+        <p>بنينا النظام على أسس هندسية تضمن عدم توقف العمل الميداني مهما كانت الظروف داخل المدرسة.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+          </div>
+          <h3>يعمل 100% بدون إنترنت</h3>
+          <p>لا تتوقف بوابات المدرسة أبداً؛ النظام يخزن البيانات محلياً على أجهزة الاستقبال ويزامنها مع السيرفر الرئيسي عبر الشبكة الداخلية.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>كارنيهات ذكية مشفرة</h3>
+          <p>كود حماية رقمي يمنع تكرار أو استنساخ الكارنيه. وعند إعادة طباعة كارنيه بدل فاقد يتم إلغاء القديم فوراً.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          </div>
+          <h3>طباعة تذاكر الانصراف فوراً</h3>
+          <p>إصدار تذكرة أمنية حرارية مع كل طالب خارج من المدرسة لتسليمها لولي الأمر أو لمشرف الأتوبيس لمنع أي خروج خاطئ.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>إدارة دقيقة للأتوبيسات</h3>
+          <p>توزيع الطلاب على الحافلات والمشرفين وخطوط السير، مع كشف فوري بالطلاب الذين لم يصعدوا إلى سياراتهم.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>استيراد وتصدير إكسيل</h3>
+          <p>رفع ملفات Excel لقوائم الطلاب كاملة وتحديث بياناتهم، بالإضافة لتصدير تقارير الغياب والحضور بضغطة زر.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>حزمة تثبيت تلقائية</h3>
+          <p>ملف تثبيت واحد (Windows Installer) يقوم بتهيئة الخادم وقاعدة البيانات وخدمة الطباعة بدون أي تدخل يدوي معقد.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ALL SCREENS GALLERY ================= -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>معرض الشاشات الكامل</span>
+        </div>
+        <h2>استعراض شاشات النظام بدقة عالية</h2>
+        <p>اضغط على أي صورة لمشاهدة تفاصيل الشاشة بالحجم الكامل.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 1 -->
+        <div class="gallery-card" data-zoom-src="images/لوحة المتابعة.png" data-zoom-caption="لوحة المتابعة الرئيسية">
+          <div class="gallery-thumb">
+            <img src="images/لوحة المتابعة.png" alt="لوحة المتابعة">
+          </div>
+          <div class="gallery-info">
+            <h4>لوحة المتابعة والداشبورد</h4>
+            <span>images/لوحة المتابعة.png</span>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="gallery-card" data-zoom-src="images/الغياب والحضور.png" data-zoom-caption="شاشة الغياب والحضور وتذاكر الانصراف">
+          <div class="gallery-thumb">
+            <img src="images/الغياب والحضور.png" alt="الغياب والحضور">
+          </div>
+          <div class="gallery-info">
+            <h4>الغياب والحضور وتذاكر الانصراف</h4>
+            <span>images/الغياب والحضور.png</span>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="gallery-card" data-zoom-src="images/الطلاب والأشخاص.png" data-zoom-caption="شاشة شؤون الطلاب والأشخاص">
+          <div class="gallery-thumb">
+            <img src="images/الطلاب والأشخاص.png" alt="الطلاب والأشخاص">
+          </div>
+          <div class="gallery-info">
+            <h4>شؤون الطلاب وبيانات أولياء الأمور</h4>
+            <span>images/الطلاب والأشخاص.png</span>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="gallery-card" data-zoom-src="images/الأتوبيسات والنقل.png" data-zoom-caption="شاشة إدارة الأتوبيسات وخطوط السير">
+          <div class="gallery-thumb">
+            <img src="images/الأتوبيسات والنقل.png" alt="الأتوبيسات والنقل">
+          </div>
+          <div class="gallery-info">
+            <h4>إدارة الأتوبيسات وخطوط النقل</h4>
+            <span>images/الأتوبيسات والنقل.png</span>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="gallery-card" data-zoom-src="images/طباعة الكارنيهات.png" data-zoom-caption="مصمم ومطبعة الكارنيهات المدرسية">
+          <div class="gallery-thumb">
+            <img src="images/طباعة الكارنيهات.png" alt="طباعة الكارنيهات">
+          </div>
+          <div class="gallery-info">
+            <h4>مصمم ومطبعة الكارنيهات</h4>
+            <span>images/طباعة الكارنيهات.png</span>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="gallery-card" data-zoom-src="images/الترحيل السنوي.png" data-zoom-caption="شاشة الترحيل السنوي وتحديث الصفوف">
+          <div class="gallery-thumb">
+            <img src="images/الترحيل السنوي.png" alt="الترحيل السنوي">
+          </div>
+          <div class="gallery-info">
+            <h4>الترحيل ونقل الصفوف السنوي</h4>
+            <span>images/الترحيل السنوي.png</span>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="gallery-card" data-zoom-src="images/الإعدادات والصلاحيات.png" data-zoom-caption="شاشة الإعدادات وصلاحيات المستخدمين">
+          <div class="gallery-thumb">
+            <img src="images/الإعدادات والصلاحيات.png" alt="الإعدادات والصلاحيات">
+          </div>
+          <div class="gallery-info">
+            <h4>الإعدادات والصلاحيات والنسخ الاحتياطي</h4>
+            <span>images/الإعدادات والصلاحيات.png</span>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="gallery-card" data-zoom-src="images/مصمم التذاكر الحرارية.png" data-zoom-caption="مصمم تذاكر الانصراف الحرارية">
+          <div class="gallery-thumb">
+            <img src="images/مصمم التذاكر الحرارية.png" alt="مصمم التذاكر الحرارية">
+          </div>
+          <div class="gallery-info">
+            <h4>مصمم تذاكر الانصراف الحرارية</h4>
+            <span>images/مصمم التذاكر الحرارية.png</span>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="gallery-card" data-zoom-src="images/تسجيل الدخول.png" data-zoom-caption="شاشة تسجيل الدخول والاتصال الآمن">
+          <div class="gallery-thumb">
+            <img src="images/تسجيل الدخول.png" alt="تسجيل الدخول">
+          </div>
+          <div class="gallery-info">
+            <h4>تسجيل الدخول والاتصال الآمن</h4>
+            <span>images/تسجيل الدخول.png</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SYSTEM SPECS & HARDWARE ================= -->
+  <section class="specs-section" id="specs">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>المواصفات ومتطلبات التشغيل</span>
+        </div>
+        <h2>توافق فائق مع بنية المدارس وأجهزتها</h2>
+        <p>تصميم معماري مرن يعمل على الأجهزة المتوفرة بالفعل في مدرستك بدون تكاليف إضافية باهظة.</p>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-box">
+          <h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            متطلبات الخادم والأجهزة
+          </h3>
+          <ul class="spec-list">
+            <li>
+              <span>نظام التشغيل المدعوم:</span>
+              <span>Windows 10 / Windows 11 (64-bit)</span>
+            </li>
+            <li>
+              <span>نوع المعمارية:</span>
+              <span>Client / Master Architecture</span>
+            </li>
+            <li>
+              <span>قاعدة البيانات المركزية:</span>
+              <span>PostgreSQL + Prisma ORM</span>
+            </li>
+            <li>
+              <span>الكاش المحلي للأجهزة:</span>
+              <span>SQLite فائق السرعة مدمج</span>
+            </li>
+            <li>
+              <span>المزامنة والاتصال:</span>
+              <span>Socket.IO + Delta Cursor Sync</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="spec-box">
+          <h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            الطابعات وأجهزة الإدخال
+          </h3>
+          <ul class="spec-list">
+            <li>
+              <span>طابعات تذاكر الانصراف:</span>
+              <span>طابعات حرارية 58mm و 80mm (USB / Network)</span>
+            </li>
+            <li>
+              <span>طابعات الكارنيهات:</span>
+              <span>طابعات PVC مخصصة أو طابعات أفرخ عادية A4</span>
+            </li>
+            <li>
+              <span>أجهزة قراءة الباركود:</span>
+              <span>جميع قارئات Barcode / 2D Scanner اليدوية والثابتة</span>
+            </li>
+            <li>
+              <span>التقاط صور الطلاب:</span>
+              <span>كاميرات الويب Webcams أو استيراد ملفات الصور</span>
+            </li>
+            <li>
+              <span>خدمة الطباعة:</span>
+              <span>خدمة Windows مستقلة عالية السرعة</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ SECTION ================= -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span>الأسئلة الشائعة</span>
+        </div>
+        <h2>إجابات عن أكثر الاستفسارات تكراراً</h2>
+      </div>
+
+      <div class="faq-wrapper">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>هل يتطلب البرنامج وجود اتصال دائم بالإنترنت؟</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>لا، النظام مبني بمبدأ (Offline-First) بالكامل. يعمل التطبيق بكفاءة 100% داخل المدرسة دون أي حاجة للإنترنت. تتصل الأجهزة الفرعية بالجهاز الرئيسي عبر الراوتر أو الشبكة الداخلية المحلية (LAN / Wi-Fi).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>كيف يمنع النظام تزوير أو استنساخ الكارنيهات المدرسية؟</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>يعتمد النظام كود كارنيه ذكي مع رقم إصدار فريد (مثل 1001-2). بمجرد إعادة إصدار أو طباعة كارنيه جديد لأي طالب، يتم إبطال الكود القديم فوراً في النظام ولا يمكن تسجيل الحضور به ثانية.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>هل يمكن ربط أكثر من جهاز كمبيوتر في نفس الوقت؟</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>نعم، يتيح ملف التثبيت اختيار (الجهاز الرئيسي Master) الذي يثبت السيرفر وقاعدة البيانات، واختيار (جهاز فرعي Client) لأجهزة بوابات الدخول ومكاتب شؤون الطلاب، وتتم المزامنة بينهم لحظياً.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>كيف تتم إدارة حركة انصراف الطلاب مع الأتوبيسات وأولياء الأمور؟</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>شاشة الانصراف تسمح بتحديد وسيلة المغادرة بضغطة واحدة (أتوبيس المدرسة، ولي الأمر، بمفرده، أو إذن خروج مرضي) وتطبع تذكرة استلام أمنية حرارية فوراً لحماية الطالب والمدرسة.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>هل يمكن استيراد بيانات الطلاب المسجلين بالفعل في المدرسة؟</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>بالتأكيد، يوفر البرنامج معالج استيراد ملفات Excel متطور يمكنه سحب آلاف سجلات الطلاب وفصولهم وأولياء أمورهم في دقائق معدودة مع إمكانية التعديل الجماعي في أي وقت.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA BANNER ================= -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-box">
+        <div class="badge-pill" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); color: #34d399;">
+          جاهز لترقية منظومة مدرستك؟
+        </div>
+        <h2>احصل على نسختك التجريبية أو استشر المطور الآن</h2>
+        <p>نقدم الدعم الكامل للتثبيت والتدريب وتهيئة الأجهزة والطابعات لتعمل بكفاءة مطلقة في مدرستك من اليوم الأول.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/201000000000?text=مرحباً، أريد الاستفسار عن نظام إدارة المدارس جيمس الأمريكي" target="_blank" class="btn btn-whatsapp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/></svg>
+            تواصل عبر واتساب فوراً
+          </a>
+          <a href="#tabs-showcase" class="btn btn-glass">
+            مراجعة التبويبات والواجهات
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="images/شعار المدرسة.png" alt="شعار المدرسة" style="width: 32px; height: 32px; object-fit: contain;">
+        <span><strong>James American School Management System</strong> - جميع الحقوق محفوظة &copy; 2026</span>
+      </div>
+      <div class="footer-credits">
+        تصميم وتطوير بواسطة <strong>Youssab (يوساب)</strong>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <button class="lightbox-close" id="lightbox-close" aria-label="إغلاق النافذة">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="معاينة الشاشة بالحجم الكامل" class="lightbox-img" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>
